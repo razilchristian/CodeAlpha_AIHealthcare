@@ -1,0 +1,27 @@
+:root {
+  --color-medical-blue: #2563EB;
+  --color-medical-teal: #14B8A6;
+  --color-medical-orange: #F97316;
+  
+  --color-bg-base: #F8FAFC;
+  --color-bg-subtle: #EFF6FF;
+  --color-bg-white: #FFFFFF;
+}
+
+@layer utilities {
+  .premium-shadow {
+    box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.04), 0 0 3px rgba(0,0,0,0.02);
+  }
+
+  .floating-blob {
+    filter: blur(80px);
+    opacity: 0.5;
+    animation: float 10s ease-in-out infinite;
+  }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px) scale(1); }
+  50% { transform: translateY(-20px) scale(1.05); }
+  100% { transform: translateY(0px) scale(1); }
+}
