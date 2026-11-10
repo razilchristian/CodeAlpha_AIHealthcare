@@ -265,6 +265,14 @@ export default function PredictionPage() {
                       </h3>
 
                       <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+                        {result.architecture && (
+                          <div className="mb-4 pb-3 border-b border-slate-100 flex items-center justify-between text-xs">
+                            <span className="font-semibold text-slate-500">Model Engine</span>
+                            <span className="font-bold text-blue-600 bg-blue-50 px-2.5 py-1 rounded-full border border-blue-100">
+                              {result.architecture}
+                            </span>
+                          </div>
+                        )}
                         <div className="flex justify-between text-sm mb-3">
                           <span className="font-bold text-slate-700">Confidence</span>
                           <span className="font-black text-slate-900">{result.confidence}%</span>
